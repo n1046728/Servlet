@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MyCounter3_initParam extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	int count;
-	
+	 
 	@Override
 	public void init() throws ServletException {
 		System.out.println("MyCounter3 initParam");
