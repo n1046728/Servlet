@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0"
-metadata-complete="true">
+metadata-complete="true"> <!-- metadata-complete 設定為true 才會以web.xm url-pattern為主否則Anotation 設定的url-pattern也會有效 -->
   <display-name>Servlet</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -13,9 +13,21 @@ metadata-complete="true">
   <servlet>
   	<servlet-name>MyCounter1</servlet-name>
   	<servlet-class>test01_servlet.MyCounter1</servlet-class>
+  	<load-on-startup>10</load-on-startup>
   </servlet>
   <servlet-mapping>
   	<servlet-name>MyCounter1</servlet-name>
   	<url-pattern>/myCounter1</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>MyCounter2</servlet-name>
+  	<servlet-class>test01_servlet.MyCounter2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyCounter2</servlet-name>
+  
+  	<url-pattern>*.mm</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

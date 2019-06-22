@@ -13,6 +13,11 @@ public class MyCounter1 extends HttpServlet {
 	private Integer count=0;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath()+"....MyCounter1 : "+count++);
+		response.getWriter().append("Served at: ").append(request.getContextPath()+"....MyCounter1 : "+ ++count);
+	}
+
+	@Override
+	public void init() throws ServletException {
+		System.out.println("MyCounter1 Servlet init......");
 	}
 }
