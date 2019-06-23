@@ -50,7 +50,7 @@
     <servlet-name>MyCounter4</servlet-name>
     <url-pattern>/MyCounter4</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>MyCounter5</servlet-name>
     <servlet-class>test01_servlet.MyCounter5_destroy</servlet-class>
   </servlet>
@@ -58,4 +58,32 @@
     <servlet-name>MyCounter5</servlet-name>
     <url-pattern>/MyCounter5</url-pattern>
   </servlet-mapping>
+  <!--  test02_formGetPost -->
+  <servlet>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>test02_formGetPost.HelloWorld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HelloGet</servlet-name>
+    <servlet-class>test02_formGetPost.HelloGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloGet</servlet-name>
+    <url-pattern>/HelloGet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>HelloPost</servlet-name>
+    <servlet-class>test02_formGetPost.HelloPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloPost</servlet-name>
+    <url-pattern>/HelloPost</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
