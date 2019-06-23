@@ -20,4 +20,13 @@
    4. if program not necessary persist variable,u can use local variable to avoid race condition
 ## MyCounter5
    destroy method may let u save data to db or file that can helpful to use it next time.
-   
+# test02_formGetPost
+## HelloWorld
+   1.test1 mark res.setContentType("text/html; charset=UTF-8")-->garbled Chinese text
+   2.test2 run program without method doGet-->HTTP Status 405 – Method Not Allowed
+## HelloGet & formGet.html
+   * u should know how to passvalue from html and html call servlet
+## HelloPost & formPost
+   * u should know how to set post method in html and know diffrent with get hot to passvalue
+## formGet.jsp & formPost.jsp
+   * know how to write jsp file
