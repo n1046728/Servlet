@@ -19,5 +19,8 @@
    3. synchronized(this){ int local_count =++count}.... declare local variable 
    4. if program not necessary persist variable,u can use local variable to avoid race condition
 ## MyCounter5
-   destroy method may let u save data to db or file that can helpful to use it next time.
-   
+   destroy method may let u save data to db or file that can helpful to use it next time (init method).
+## Background Thread
+   * ex.股票即時回應系統、排程器
+   * init()啟動、doGet()處理回應結果、destroy()結束
+   * 注意背景執行訊由destroy()負責停止，否則會執行到JVM停止為止，甚至Servlet Reloading時不但不會停止，還會重新產生背景執行緒

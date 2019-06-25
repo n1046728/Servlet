@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="true" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+metadata-complete="false" version="3.0">
+<!-- if metadata-complete set to true will ignore any anotations -->
+
   <display-name>Servlet</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -9,6 +12,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!--  test01_servlet -->
   <servlet>
     <servlet-name>MyCounter1</servlet-name>
     <servlet-class>test01_servlet.MyCounter1</servlet-class>
@@ -58,6 +63,8 @@
     <servlet-name>MyCounter5</servlet-name>
     <url-pattern>/MyCounter5</url-pattern>
   </servlet-mapping>
+  <!--  test01_servlet -->
+  
   <!--  test02_formGetPost -->
   <servlet>
     <servlet-name>HelloWorld</servlet-name>
@@ -74,7 +81,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloGet</servlet-name>
-    <url-pattern>/HelloGet</url-pattern>
+    <url-pattern>/test02/HelloGet</url-pattern>
   </servlet-mapping>
   
    <servlet>
@@ -83,7 +90,42 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloPost</servlet-name>
-    <url-pattern>/HelloPost</url-pattern>
+    <url-pattern>/test02/HelloPost</url-pattern>
   </servlet-mapping>
+  <!--  test02_formGetPost -->
+  
+  <!--  test03_advanced Servlet -->
+  <servlet>
+  	<servlet-name>ServletInfo</servlet-name>
+  	<servlet-class>test03_advanced_servlet.ServletInfo</servlet-class>
+	<init-param>
+		<param-name>init_1</param-name>
+		<param-value>1</param-value>
+	</init-param>
+	<init-param>
+		<param-name>init_2</param-name>
+		<param-value>2</param-value>
+	</init-param>
+	<init-param>
+		<param-name>init_3</param-name>
+		<param-value>3</param-value>
+	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletInfo</servlet-name>
+  	<url-pattern>/ServletInfo</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>ServertInfo</servlet-name>
+  	<servlet-class>test03_advanced_servlet.ServerInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServertInfo</servlet-name>
+  	<url-pattern>/ServertInfo</url-pattern>
+  </servlet-mapping>
+  
+  <!--  test03_advanced Servlet -->
+  
   
 </web-app>
