@@ -19,8 +19,22 @@
    3. synchronized(this){ int local_count =++count}.... declare local variable 
    4. if program not necessary persist variable,u can use local variable to avoid race condition
 ## MyCounter5
+<<<<<<< HEAD
    destroy method may let u save data to db or file that can helpful to use it next time (init method).
 ## Background Thread
    * ex.股票即時回應系統、排程器
    * init()啟動、doGet()處理回應結果、destroy()結束
    * 注意背景執行訊由destroy()負責停止，否則會執行到JVM停止為止，甚至Servlet Reloading時不但不會停止，還會重新產生背景執行緒
+=======
+   destroy method may let u save data to db or file that can helpful to use it next time.
+# test02_formGetPost
+## HelloWorld
+   1.test1 mark res.setContentType("text/html; charset=UTF-8")-->garbled Chinese text
+   2.test2 run program without method doGet-->HTTP Status 405 – Method Not Allowed
+## HelloGet & formGet.html
+   * u should know how to passvalue from html and html call servlet
+## HelloPost & formPost
+   * u should know how to set post method in html and know diffrent with get hot to passvalue
+## formGet.jsp & formPost.jsp
+   * know how to write jsp file
+>>>>>>> branch 'master' of https://github.com/n1046728/Servlet.git
