@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 
 @WebServlet(name="/ServerInfo")
 public class ServerInfo extends GenericServlet{
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {

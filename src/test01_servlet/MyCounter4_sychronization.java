@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/MyCounter4")
+//@WebServlet("/MyCounter4")
 public class MyCounter4_sychronization extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
